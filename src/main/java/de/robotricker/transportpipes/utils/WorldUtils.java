@@ -55,6 +55,8 @@ public class WorldUtils {
             case DISPENSER:
             case CHEST:
             case FURNACE:
+            case BLAST_FURNACE:
+            case SMOKER:
             case TRAPPED_CHEST:
             case DROPPER:
             case HOPPER:

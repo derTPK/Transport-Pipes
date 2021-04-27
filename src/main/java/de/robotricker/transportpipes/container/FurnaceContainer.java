@@ -3,6 +3,8 @@ package de.robotricker.transportpipes.container;
 import org.bukkit.Chunk;
 import org.bukkit.block.Block;
 import org.bukkit.block.Furnace;
+import org.bukkit.block.Smoker;
+import org.bukkit.block.BlastFurnace;
 import org.bukkit.inventory.FurnaceInventory;
 import org.bukkit.inventory.ItemStack;
 
