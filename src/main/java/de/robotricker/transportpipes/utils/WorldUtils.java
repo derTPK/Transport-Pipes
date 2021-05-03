@@ -54,6 +54,7 @@ public class WorldUtils {
         switch (material) {
             case DISPENSER:
             case CHEST:
+            case BARREL:
             case FURNACE:
             case BLAST_FURNACE:
             case SMOKER:
