@@ -9,6 +9,8 @@ import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentLinkedDeque;
 import java.util.concurrent.ConcurrentLinkedQueue;
+
+import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.World;
 import org.bukkit.entity.Player;
@@ -160,7 +162,7 @@ public class Pipe extends Duct {
 		}
 
         List<PipeItem> copiedItems = new ArrayList<PipeItem>(items);
-
+		int itemCount = copiedItems.size();
 		for (int i = copiedItems.size() - 1; i >= 0; i--) {
 			PipeItem pipeItem = copiedItems.get(i);
 
@@ -177,7 +179,6 @@ public class Pipe extends Duct {
 				List<TPDirection> possibleMovingDirs = new ArrayList<>(getAllConnections());
 
 				Map<TPDirection, Integer> distribution = calculateItemDistribution(pipeItem, pipeItem.getMovingDir(), possibleMovingDirs, transportPipes);
-
 				if (distribution == null || distribution.isEmpty()) {
 					if (distribution != null) {
 						transportPipes.runTaskSync(() -> {
@@ -196,9 +197,9 @@ public class Pipe extends Duct {
                         items.remove(pipeItem);
                         pipeManager.despawnPipeItem(pipeItem);
                         // drop item
-                        transportPipes.runTaskSync(() -> {
-                            pipeItem.getWorld().dropItem(pipeItem.getBlockLoc().getNeighbor(pipeItem.getMovingDir()).toLocation(pipeItem.getWorld()), pipeItem.getItem());
-                        });
+                        //transportPipes.runTaskSync(() -> {
+                        //    pipeItem.getWorld().dropItem(pipeItem.getBlockLoc().getNeighbor(pipeItem.getMovingDir()).toLocation(pipeItem.getWorld()), pipeItem.getItem());
+                        //});
     					continue;
 					}
 				}
