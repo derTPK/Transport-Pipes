@@ -8,6 +8,7 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.bukkit.Bukkit;
 import org.bukkit.Chunk;
 import org.bukkit.Material;
 import org.bukkit.World;
@@ -133,7 +134,6 @@ public class CraftingPipe extends Pipe {
                 }
             }
         }
-
         return space;
     }
 
@@ -155,6 +155,7 @@ public class CraftingPipe extends Pipe {
 
     public void setRecipe(Recipe recipe) {
         this.recipe = recipe;
+        updateIngredients(this.recipe);
     }
 
     private  void updateIngredients(Recipe recipe){
