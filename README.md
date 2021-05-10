@@ -7,9 +7,7 @@ For more detailed information read the TransportPipes wiki:
 
 <a href="https://github.com/RoboTricker/Transport-Pipes/wiki">![Wiki](https://cdn.discordapp.com/attachments/315609061859131392/340971064937152512/Logomakr_5JxOqW.png)</a>
 
-For issueing bugs and suggestions you can either use the following Discord server:
-https://discord.gg/wPKCAX5
-or write a new issue here on GitHub.
+For issueing bugs and suggestions you can write a new issue here on GitHub.
 # Builds
 
 <a href="http://ci.codemc.org/job/RoboTricker/job/TransportPipes">![Build Status](http://ci.codemc.org/job/RoboTricker/job/TransportPipes/badge/icon)</a>
